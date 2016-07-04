@@ -10,7 +10,6 @@ def parse_image_lines(input_filename='index.html',
     boundary_re = re.compile('--BoundaryString')
     ifh = open(input_filename, 'r')
     ofh = open(output_filename, 'wb')
-    import pdb; pdb.set_trace()
     line = ifh.readline()
     if boundary_re.match(line):
         print 'found starting boundary'
